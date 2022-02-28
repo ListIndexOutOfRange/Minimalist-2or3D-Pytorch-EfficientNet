@@ -39,6 +39,20 @@ y   = net(x)
 ```
 
 
+## Extra infos
+
+EfficientNet has two handy attributes: **num_params** and **latent_dim**.
+The latter can be usefull when using a decoder (see bellow). 
+Note that in addition to the usual **forward** method, it implements an **extract_feature**
+method that returns the embedded input in the latent space, right before the final classifier.
+
+```python
+
+print(net.num_params)
+print(net.latent_dim)
+```
+
+
 ## With decoder
 
 ```python
@@ -49,3 +63,5 @@ decoder = Decoder(out_size=input_size, dim=dim, latent_dim=net.latent_dim).to(de
 
 x_hat = decoder(net.extract_features(x))
 ```
+
+
