@@ -1,0 +1,17 @@
+#    Byte-compiled / optimized / DLL files
+**/__pycache__/
+**/.ipynb_checkpoints/
+*.py[cod]
+*.pyc
+*.pyo
+*.so
+
+# Vscode
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
